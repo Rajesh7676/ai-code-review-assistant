@@ -96,6 +96,34 @@ streamlit run app.py
 ```
 
 Open `http://localhost:8501` in the browser and use the app.
+## Demo Guide
+
+This project is best demonstrated by showing a simple code snippet in the Streamlit UI, submitting it for review, and walking through the output returned by the AI assistant.
+
+### What to highlight in a demo
+
+- The code is sent from the frontend to the FastAPI backend.
+- The backend builds a prompt and sends it to a local LLM through Ollama.
+- The model returns a structured review with three parts:
+  - Logic explanation
+  - Possible bugs or edge cases
+  - Optimization suggestions
+- The result is shown back in the browser in a clean, readable format.
+
+### Why this project matters
+
+- It shows how AI can be used for practical developer tooling.
+- It runs locally, so it does not depend on external API keys.
+- It combines frontend, backend, prompt engineering, and containerization in one project.
+- It is a good example of building a full-stack application around an LLM workflow.
+
+### Talking points for recruiters
+
+- Local AI inference with Ollama and DeepSeek Coder.
+- FastAPI backend with structured request and response handling.
+- Streamlit frontend for simple user interaction.
+- Docker Compose setup for easy deployment and reproducibility.
+- Clear separation of concerns between UI, API, and model service.
 
 ## Example
 
