@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  ollama:
+    image: ollama/ollama
+    container_name: ollama
+    ports:
+      - "11434:11434"
+    # Persist models
+    volumes:
+      - ollama-data:/root/.ollama
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: ./backend
+    container_name: ai-code-review-backend
+    depends_on:
+      - ollama
+    environment:
+      - OLLAMA_URL=http://ollama:11434
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build:
+      context: ./frontend
+    container_name: ai-code-review-frontend
+    depends_on:
+      - backend
+    environment:
+      - BACKEND_URL=http://backend:8000/review
+    ports:
+      - "8501:8501"
+
+volumes:
+  ollama-data:
