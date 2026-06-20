@@ -18,6 +18,16 @@ An **AI-powered code review tool** that explains your code, highlights potential
 - Containerization: Docker, Docker Compose  
 - Language: Python 3.11  
 
+### Project structure
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/7e5dc4ac-1b63-415c-a260-4420d20660d8" />
+
+### Request flow
+<img width="1774" height="887" alt="image" src="https://github.com/user-attachments/assets/b5eadcda-132f-42fa-981e-a487a8f35d62" />
+
+### LLM internals
+<img width="1024" height="1536" alt="image" src="https://github.com/user-attachments/assets/318f0799-0e6d-49d1-a036-a0d140b60801" />
+
+
 ## Architecture
 
 - Ollama  
